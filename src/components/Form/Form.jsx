@@ -1,10 +1,14 @@
 import React, { Component } from 'react';
+import { nanoid } from 'nanoid';
 
 class Form extends Component {
   state = {
     name: 'Name Surname',
     number: '+380',
   };
+
+  nameInputId = nanoid();
+  numberInputId = nanoid();
 
   handleInputChange = event => {
     const { name, value } = event.currentTarget;
@@ -27,7 +31,7 @@ class Form extends Component {
   render() {
     return (
       <form onSubmit={this.handleSubmit}>
-        <label>
+        <label htmlFor={this.nameInputId}>
           <input
             type="text"
             name="name"
@@ -35,10 +39,11 @@ class Form extends Component {
             title="Name may contain only letters, apostrophe, dash and spaces. For example Adrian, Jacob Mercer, Charles de Batz de Castelmore d'Artagnan"
             value={this.state.name}
             onChange={this.handleInputChange}
+            id={this.nameInputId}
             required
           />
         </label>
-        <label htmlFor="ContactPhoneNumberInput">
+        <label htmlFor={this.numberInputId}>
           <input
             type="tel"
             name="number"
@@ -46,7 +51,7 @@ class Form extends Component {
             title="Phone number must be digits and can contain spaces, dashes, parentheses and can start with +"
             value={this.state.number}
             onChange={this.handleInputChange}
-            id="ContactPhoneNumberInput"
+            id={this.numberInputId}
             required
           />
         </label>
