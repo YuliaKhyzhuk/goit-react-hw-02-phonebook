@@ -3,7 +3,7 @@ import styled from 'styled-components';
 export const FormContainer = styled.div`
 display: flex;
 gap: 10px;
-margin-bottom: 16px;
+margin-bottom: 20px;
 `;
 
 export const FormInput = styled.input`
@@ -32,7 +32,7 @@ export const AddContactButton = styled.button`
   font-size: 12px;
   margin-left: auto;
   margin-right: auto;
-
+  margin-bottom: 32px;
   font-weight: bold;
   cursor: pointer;
   background-color: ${props => props.theme.colors.backgroundYellow};

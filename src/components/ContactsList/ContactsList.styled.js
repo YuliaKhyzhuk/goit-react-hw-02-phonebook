@@ -34,7 +34,7 @@ export const DeleteContactButton = styled.button`
   // gap: 10px;
   flex-basis: calc(100% / 3 - 20px);
   padding: 8px;
-  font-weight: bold;
+    font-weight: bold;
   cursor: pointer;
   background-color: ${props => props.theme.colors.backgroundYellow};
   box-shadow: 0px 0px 10px 0px ${props => props.theme.colors.secondaryAccent};
