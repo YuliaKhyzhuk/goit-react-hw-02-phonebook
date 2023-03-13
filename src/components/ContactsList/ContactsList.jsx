@@ -1,13 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { DeleteContactButton } from './ContactsList.styled';
+import { DeleteContactButton, ContactsContainer, ContactsData } from './ContactsList.styled';
 
 
 export const ContactsList = ({ contacts, onDeleteContact }) => {
   return (
-    <ul className="ContactsList">
+    <ContactsContainer>
       {contacts.map(({ name, number, id }) => (
-        <li key={id} className="ContactsList__item">
+        <ContactsData key={id} className="ContactsList__item">
           {name}: {number}
           <DeleteContactButton
             type="button"
@@ -16,9 +16,9 @@ export const ContactsList = ({ contacts, onDeleteContact }) => {
           >
             Delete
           </DeleteContactButton>
-        </li>
+        </ContactsData>
       ))}
-    </ul>
+    </ContactsContainer>
   );
 };
 

@@ -1,13 +1,39 @@
 import styled from 'styled-components';
 
-export const DeleteContactButton = styled.button`
+export const ContactsContainer = styled.ul`
   display: flex;
   justify-content: space-between;
   flex-direction: column;
   align-items: center;
   gap: 10px;
-  flex-basis: calc(100% / 3 - 20px);
+  // flex-basis: calc(100% / 3 - 20px);
   padding: 16px;
+  font-weight: bold;
+  font-size: 12px;
+  // background-color: ${props => props.theme.colors.backgroundYellow};
+  // box-shadow: 0px 0px 10px 0px ${props => props.theme.colors.secondaryAccent};
+  // border: 1px solid ${props => props.theme.colors.secondary};
+  // border-radius: ${props => props.theme.borderRadius.sm};
+
+
+`;
+
+export const ContactsData = styled.li`
+  // padding-left: 16px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  justify-content: flex-around;
+`;
+
+export const DeleteContactButton = styled.button`
+  display: flex;
+  // justify-content: space-between;
+  // flex-direction: column;
+  align-items: center;
+  // gap: 10px;
+  flex-basis: calc(100% / 3 - 20px);
+  padding: 8px;
   font-weight: bold;
   cursor: pointer;
   background-color: ${props => props.theme.colors.backgroundYellow};

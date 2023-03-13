@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { nanoid } from 'nanoid';
+import { FormInput, AddContactButton, FormContainer } from './Form.styled';
 
 class Form extends Component {
   state = {
@@ -31,9 +32,11 @@ class Form extends Component {
 
   render() {
     return (
+     
       <form onSubmit={this.handleSubmit}>
+         <FormContainer>
         <label htmlFor={this.nameInputId}>
-          <input
+          <FormInput
             type="text"
             name="name"
             pattern="^[a-zA-Zа-яА-Я]+(([' -][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$"
@@ -45,7 +48,7 @@ class Form extends Component {
           />
         </label>
         <label htmlFor={this.numberInputId}>
-          <input
+          <FormInput
             type="tel"
             name="number"
             pattern="\+?\d{1,4}?[-.\s]?\(?\d{1,3}?\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}"
@@ -56,9 +59,11 @@ class Form extends Component {
             required
           />
         </label>
+        </FormContainer>
 
-        <button type="submit">Add contact</button>
+        <AddContactButton type="submit">Add contact</AddContactButton>
       </form>
+  
     );
   }
 }
