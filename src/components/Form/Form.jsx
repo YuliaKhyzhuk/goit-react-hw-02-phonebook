@@ -4,8 +4,8 @@ import { nanoid } from 'nanoid';
 
 class Form extends Component {
   state = {
-    name: 'Name Surname',
-    number: '+380',
+    name: '',
+    number: '',
   };
 
   nameInputId = nanoid();
